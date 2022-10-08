@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1600%20Pennsylvania%20Ave%20NW,%20Washington%20DC&benchmark=2020&format=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - geocoding.geo.census.gov
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Thu, 06 Oct 2022 23:54:32 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '689'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - Deny
+      Cache-Control:
+      - private, no-store
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1;mode=block
+      Vary:
+      - Origin
+      Set-Cookie:
+      - TS0193e6a1=01283c52a43683c47bd88677ebcccd9d40b25a382fdb4469ffe7415a5db5ec3a360af7ba0946ca7eeeffe5271366a318d2623dd474;
+        Path=/; Domain=.geocoding.geo.census.gov
+    body:
+      encoding: UTF-8
+      string: '{"result":{"input":{"address":{"address":"1600 Pennsylvania Ave NW,
+        Washington DC"},"benchmark":{"isDefault":false,"benchmarkDescription":"Public
+        Address Ranges - Census 2020 Benchmark","id":"2020","benchmarkName":"Public_AR_Census2020"}},"addressMatches":[{"tigerLine":{"side":"L","tigerLineId":"76225813"},"coordinates":{"x":-77.03534431753657,"y":38.898752686023606},"addressComponents":{"zip":"20500","streetName":"PENNSYLVANIA","preType":"","city":"WASHINGTON","preDirection":"","suffixDirection":"NW","fromAddress":"1600","state":"DC","suffixType":"AVE","toAddress":"1698","suffixQualifier":"","preQualifier":""},"matchedAddress":"1600
+        PENNSYLVANIA AVE NW, WASHINGTON, DC, 20500"}]}}'
+  recorded_at: Thu, 06 Oct 2022 23:54:32 GMT
+recorded_with: VCR 6.1.0

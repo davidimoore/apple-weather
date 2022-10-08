@@ -1,0 +1,16 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <table class="table table-striped">
+      <tbody>
+      <% data&.each do |forecast| %>
+        <tr>
+          <td><%= forecast[:date] %> - <%= forecast[:day] %></td>
+          <td><img src="<%= forecast[:icon] %>" alt="icon" /></td>
+          <td><%= forecast[:temperature] %> Farenheit</td>
+          <td><%= forecast[:detailed_forecast] %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

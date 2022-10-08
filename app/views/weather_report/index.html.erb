@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+  <div class="col-10">
+    <%= form_with url: "/weather_reports",
+                  class: "row g-2 p-4 justify-content-center",
+                  data: { turbo_frame: "weather_report" },
+                  method: :get do |form|
+    %>
+      <div class="col-6">
+        <%= form.text_field :query,
+                            required: true,
+                            class: "form-control",
+                            placeholder: "Enter Address"
+        %>
+      </div>
+      <div class="col-2">
+        <%= form.submit "Search", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<% flash.each do |_, msg| %>
+  <div class="row g-2 p-4 justify-content-center">
+    <div class="col-8">
+      <div class="warning-message">
+        <%= msg %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<%= render "weather_report", weather_report: @weather_report if @weather_report %>
+
+
+

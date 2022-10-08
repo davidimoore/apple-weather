@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=asdf&benchmark=2020&format=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - geocoding.geo.census.gov
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Sat, 08 Oct 2022 17:49:27 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '225'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - Deny
+      Cache-Control:
+      - private, no-store
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1;mode=block
+      Vary:
+      - Origin
+      Set-Cookie:
+      - TS0193e6a1=01283c52a4bd239626749fe72b56caf82f03b9ff2d442c419530255b65c46cbfe7354dd7eeca5ca3c2b48f250cf46474b11abed37b;
+        Path=/; Domain=.geocoding.geo.census.gov
+    body:
+      encoding: UTF-8
+      string: '{"result":{"input":{"address":{"address":"asdf"},"benchmark":{"isDefault":false,"benchmarkDescription":"Public
+        Address Ranges - Census 2020 Benchmark","id":"2020","benchmarkName":"Public_AR_Census2020"}},"addressMatches":[]}}'
+  recorded_at: Sat, 08 Oct 2022 17:49:27 GMT
+recorded_with: VCR 6.1.0
